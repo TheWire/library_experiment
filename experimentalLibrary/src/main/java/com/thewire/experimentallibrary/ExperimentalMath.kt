@@ -1,6 +1,6 @@
 package com.thewire.experimentallibrary
 
-import java.lang.Math.cbrt
+import kotlin.math.cbrt
 import kotlin.math.pow
 
 class ExperimentalMath {
@@ -9,6 +9,7 @@ class ExperimentalMath {
         return num.pow(3)
     }
 
+    @OptIn(ExperimentalStdlibApi::class)
     fun cubeRoot(num: Float): Float {
         return cbrt(num.toDouble()).toFloat()
     }
